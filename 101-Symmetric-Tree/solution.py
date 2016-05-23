@@ -6,15 +6,18 @@
 #         self.right = None
 
 class Solution(object):
-    def help(self, p, q):
-        if p == None and q == None: return True
-        if p and q and p.val == q.val:
-            return self.help(p.right, q.left) and self.help(p.left, q.right)
-        return False
-    
+    def isSymmetric(self,l,r):
+        if l and r:
+            return l.val==r.val and isSymmetric(l.left,r.right) and isSymmetric(l.right, r.left)
+        elif not l and not r:
+            return True
+            
     def isSymmetric(self, root):
-        if root:
-            return self.help(root.left, root.right)
-        return True
+        if not root:
+            return True
+        else:
+            return self.isSymmetric(root.left,root.right)
+        
+        
             
                                     
