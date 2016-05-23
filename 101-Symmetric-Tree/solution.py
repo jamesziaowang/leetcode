@@ -16,7 +16,7 @@ class Solution(object):
         if not root:
             return True
         else:
-            return self.help(self,root.left, root.right)
+            return self.help(root.left, root.right)
         
         
             
