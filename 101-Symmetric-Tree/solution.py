@@ -6,9 +6,9 @@
 #         self.right = None
 
 class Solution(object):
-    def isSymmetric(l,r):
+    def help(l,r):
         if l and r:
-            return l.val==r.val and self.isSymmetric(l.left,r.right) and self.isSymmetric(l.right, r.left)
+            return l.val==r.val and self.help(l.left,r.right) and self.help(l.right, r.left)
         elif not l and not r:
             return True
             
@@ -16,7 +16,7 @@ class Solution(object):
         if not root:
             return True
         else:
-            return self.isSymmetric(root.left,root.right)
+            return self.help(root.left,root.right)
         
         
             
