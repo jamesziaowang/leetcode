@@ -15,12 +15,12 @@ class Solution(object):
         while queue:
             size = len(queue)
             level = []
-            for i in range(size+1):
+            for i in range(size):
                 node = queue.pop(0)
                 level.append(node.val)
                 if node.left:
                     queue.append(node.left)
-                elif node.right:
+                if node.right:
                     queue.append(node.right)
             ret.append(level)
         return ret
