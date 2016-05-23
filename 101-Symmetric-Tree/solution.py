@@ -13,8 +13,8 @@ class Solution(object):
         
     def isSymmetric(l,r):
         if l and r:
-            return True
-        else:
             return l.val==r.val and isSymmetric(l.left,r.right) and isSymmetric(l.right, r.left)
+        else:
+            return not l and not r
             
                                     
