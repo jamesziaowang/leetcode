@@ -18,8 +18,8 @@ class Queue(object):
         """
         :rtype: nothing
         """
-        self.peed()
-        self.outStack.pop(0)
+        self.peek()
+        self.outStack.pop()
         
 
     def peek(self):
@@ -29,11 +29,11 @@ class Queue(object):
         if not self.outStack:
             while self.inStack:
                 self.outStack.append(self.inStack.pop())
-        else:
-            self.outStack[-1]
+        
+        return self.outStack[-1]
 
     def empty(self):
         """
         :rtype: bool
         """
-        return len(self.outStack)+len(self.inStack) > 0
+        return len(self.outStack)+len(self.inStack) == 0
