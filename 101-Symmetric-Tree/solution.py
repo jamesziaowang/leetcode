@@ -7,14 +7,14 @@
 
 class Solution(object):
     def isSymmetric(self, root):
-        if root is None:
+        if not root:
             return True
         return self.isSymmetric(root.left,root.right)
         
     def isSymmetric(l,r):
         if l and r:
-            return l.val==r.val and isSymmetric(l.left,r.right) and isSymmetric(l.right, r.left)
+            return True
         else:
-            return not l and not r
+            return l.val==r.val and isSymmetric(l.left,r.right) and isSymmetric(l.right, r.left)
             
                                     
