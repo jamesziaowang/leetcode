@@ -6,7 +6,7 @@
 #         self.right = None
 
 class Solution(object):
-    def isSymmetric(self,l,r):
+    def isSymmetric(l,r):
         if l and r:
             return l.val==r.val and self.isSymmetric(l.left,r.right) and self.isSymmetric(l.right, r.left)
         elif not l and not r:
