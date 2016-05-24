@@ -11,6 +11,6 @@ class Solution(object):
             return 0
         minLeft = self.minDepth(root.left)
         minRight = self.minDepth(root.right)
-        if minleft == 0 or minRight == 0:
+        if minLeft == 0 or minRight == 0:
             return minLeft+1  if minLeft>=minRight else minRight +1
         return min(minLeft,minRight)+1
