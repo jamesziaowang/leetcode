@@ -13,7 +13,7 @@ class Solution(object):
         for i in range(slen):
             tempS = sDict.get(s[i])
             if tempS and tempS != t[i]:
-                    return False
+                return False
             tempS[s[i]] = t[i]
         return True
             
