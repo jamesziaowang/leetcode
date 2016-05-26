@@ -8,9 +8,9 @@ class Solution(object):
         sDict = dict()
         tDict = dict()
         for i in range(len(s)):
-            tStr, sStr  = sDict.get(t[i]), tDic.get(s[i])
+            tStr, sStr  = sDict.get(t[i]), tDict.get(s[i])
             if tStr is None and sStr is None:
-                sDict[t[i]] ,tDic[s[i]] = s[i],t[i]
+                sDict[t[i]] ,tDict[s[i]] = s[i],t[i]
             elif tStr != s[i] and sStr != t[i]:
                 return False
         return True
