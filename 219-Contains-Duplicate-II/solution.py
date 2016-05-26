@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: bool
         """
         
-        numsDic = dict();
+        numsDict = dict();
         for y in range(len(nums)):
             x = numsDict.get(nums[y])
             if y and x-d <=k:
