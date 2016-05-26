@@ -11,6 +11,5 @@ class Solution(object):
             x = numsDict.get(nums[y])
             if y>=0 and y-x<=k:
                 return True
-            else:
-                numsDict[nums[y]] = y
+            numsDict[nums[y]] = y
         return False
