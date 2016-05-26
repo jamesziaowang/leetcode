@@ -6,15 +6,11 @@ class Solution(object):
         :rtype: bool
         """
         sDict = dict()
-        slen = len(s)
-        tlen = len(t)
-        if slen != tlen:
-            return False
-        for i in range(slen):
-            tempS = sDict.get(s[i])
-            if tempS and tempS != t[i]:
+        tDict = dict()
+        for i in range(len(s)):
+            tStr, sStr  = sDict.get(t[i]), tDic.get(s[i])
+            if tStr is None and sStr is None:
+                sDict[t[i]] ,tDic[s[i]] = s[i],t[i]
+            elif tStr != s[i] and sStr != t[i]:
                 return False
-            tempS[s[i]] = t[i]
         return True
-            
-            
