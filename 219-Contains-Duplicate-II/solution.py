@@ -9,7 +9,7 @@ class Solution(object):
         numsDict = dict();
         for y in range(len(nums)):
             x = numsDict.get(nums[y])
-            if y and x-d <=k:
+            if y and y-x <=k:
                 return True
             else:
                 numsDict[nums[y]] = y
