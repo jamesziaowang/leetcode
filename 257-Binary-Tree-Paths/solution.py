@@ -10,18 +10,18 @@ class Solution:
     # @return {string[]}
     
     
+    def help(retStr, node):
+        if node.left is None and node.right is None:
+            self.ret += retStr,
+        if node.left:
+            self.help(retStr+"->"+node.left.val,node.left)
+        if node.right:
+            self.help(retStr+"->"+node.right.val,node.right)
     
     def binaryTreePaths(self, root):
         if not root:
             return []
         self.ret = []
-        def help(retStr, node):
-            if node.left is None and node.right is None:
-                self.ret += retStr,
-            if node.left:
-                self.help(retStr+"->"+node.left.val,node.left)
-            if node.right:
-                self.help(retStr+"->"+node.right.val,node.right)
         help(str(root.val),root)
-        return ret
+        return self.ret
         
