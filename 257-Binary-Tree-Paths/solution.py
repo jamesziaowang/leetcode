@@ -10,10 +10,12 @@ class Solution:
     # @return {string[]}
     
     def help(self, nodeList, node):
-        if node: nodeList.append(node.val)
+        if node: nodeList.append(str(node.val))
         if node.left:
+            nodeList.append("->")
             self.help(nodeList,node.left)
         elif node.right:
+            nodeList.append("->")
             self.help(nodeList,node.right)
         else:
             return nodeList
@@ -26,8 +28,12 @@ class Solution:
         r = []
         l.append(root.val)
         r.append(root.val)
-        if root.left: ret.append(self.help(l,root.left))
-        elif root.right:ret.append(self.help(r,root.right))
-        else: ret.append(root.val+"")
+        if root.left: 
+            nodeList.append("->")
+            ret.append(self.help(l,root.left))
+        elif root.right:
+            nodeList.append("->")
+            ret.append(self.help(r,root.right))
+        else: ret.append(str(root.val))
         return ret
         
