@@ -26,8 +26,8 @@ class Solution:
         r = []
         l.append(root.val)
         r.append(root.val)
-        ret.append()
         if root.left: ret.append(self.help(l,root.left))
-        if root.right:ret.append(self.help(r,root.right))
+        elif root.right:ret.append(self.help(r,root.right))
+        else: ret.append(root.val+"")
         return ret
         
