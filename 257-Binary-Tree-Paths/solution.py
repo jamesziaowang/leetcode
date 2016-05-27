@@ -10,7 +10,7 @@ class Solution:
     # @return {string[]}
     
     
-    def help(retStr, node):
+    def help(self, retStr, node):
         if node.left is None and node.right is None:
             self.ret += retStr,
         if node.left:
@@ -22,6 +22,6 @@ class Solution:
         if not root:
             return []
         self.ret = []
-        help(str(root.val),root)
+        self.help(str(root.val),root)
         return self.ret
         
