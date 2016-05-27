@@ -9,31 +9,19 @@ class Solution:
     # @param {TreeNode} root
     # @return {string[]}
     
-    def help(self, nodeList, node):
-        if node: nodeList.append(str(node.val))
+    def help(self, retStr, node):
+        
+        if node.left is None and node.right is None:
+            self.ret += retStr,
         if node.left:
-            nodeList.append("->")
-            self.help(nodeList,node.left)
-        elif node.right:
-            nodeList.append("->")
-            self.help(nodeList,node.right)
-        else:
-            return nodeList
+            self.help(retStr+"->"+node.left.val,node.left)
+        if node.right:
+            self.help(retStr+"->"+node.right.val,node.right)
     
     def binaryTreePaths(self, root):
         if not root:
             return []
-        ret = []
-        l = []
-        r = []
-        l.append(root.val)
-        r.append(root.val)
-        if root.left: 
-            nodeList.append("->")
-            ret.append(self.help(l,root.left))
-        elif root.right:
-            nodeList.append("->")
-            ret.append(self.help(r,root.right))
-        else: ret.append(str(root.val))
+        self.ret = []
+        self.help("",root)
         return ret
         
