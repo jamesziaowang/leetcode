@@ -19,8 +19,7 @@ class Solution:
             self.help(retStr+"->"+ str(node.right.val),node.right)
     
     def binaryTreePaths(self, root):
-        if not root:
-            return []
+        if not root: return []
         self.ret = []
         self.help(str(root.val),root)
         return self.ret
