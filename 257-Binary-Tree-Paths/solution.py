@@ -15,13 +15,13 @@ class Solution:
         if not root:
             return []
         self.ret = []
-        def help(self, retStr, node):
+        def help(retStr, node):
             if node.left is None and node.right is None:
                 self.ret += retStr,
             if node.left:
                 self.help(retStr+"->"+node.left.val,node.left)
             if node.right:
                 self.help(retStr+"->"+node.right.val,node.right)
-        self.help("",root)
+        self.help(str(root.val),root)
         return ret
         
