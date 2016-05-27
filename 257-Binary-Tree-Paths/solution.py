@@ -22,6 +22,6 @@ class Solution:
                 self.help(retStr+"->"+node.left.val,node.left)
             if node.right:
                 self.help(retStr+"->"+node.right.val,node.right)
-        self.help(str(root.val),root)
+        help(str(root.val),root)
         return ret
         
