@@ -12,6 +12,7 @@ class Solution(object):
                 if j<len(oldstr) and oldstr[j]==oldstr[j-1]:
                     count+=1
                 else:
-                    curStr = curStr + str(count)+oldstr[j]
+                    curStr = curStr + str(count)+oldstr[j-1]
+                    count = 1
             oldstr = curStr
         return oldstr
