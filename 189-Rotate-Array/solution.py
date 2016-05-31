@@ -14,4 +14,4 @@ class Solution(object):
         n = len(nums)
         self.reverseNums(nums, 0, n-k)
         self.reverseNums(nums, n-k, n)
-        self.reverseNums(nums, 0, n-1)
+        self.reverseNums(nums, 0, n)
