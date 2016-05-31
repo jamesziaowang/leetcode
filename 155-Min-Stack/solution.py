@@ -13,7 +13,7 @@ class MinStack(object):
         :rtype: void
         """
         self.stack.append(x)
-        if len(self.minStack) and self.minStack[-1] >= x:
+        if len(self.minStack)==0 or self.minStack[-1] >= x:
             self.minStack.append(x)
 
     def pop(self):
