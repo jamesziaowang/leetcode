@@ -20,7 +20,7 @@ class MinStack(object):
         """
         :rtype: void
         """
-        if self.minStack[-1] == self.stack[-1]:
+        if self.top() == self.getMin():
             self.minStack.pop(0)
         return self.stack.pop(0)
         
