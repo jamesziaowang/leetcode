@@ -1,26 +1,42 @@
 class MinStack(object):
 
-    # @param x, an integer
-    # @return an integer
     def __init__(self):
-        self.nodes = [] #元素栈
-        self.minNodes = [] #最小值栈
+        """
+        initialize your data structure here.
+        """
+        self.stack = []
+        self.minStack = []
 
     def push(self, x):
-        self.nodes.append(x)
-        if len(self.minNodes):
-            x = min(self.minNodes[-1], x)
-        self.minNodes.append(x)
+        """
+        :type x: int
+        :rtype: void
+        """
+        self.stack.append(x)
+        if len(self.minStack) and self.minStack[-1] >= x:
+            self.minStack.append(x)
 
     def pop(self):
-        self.minNodes.pop()
-        return self.nodes.pop()
+        """
+        :rtype: void
+        """
+        if self.minStack[-1] == self.stack[-1]:
+            self.minStack.pop(0)
+        return self.stack.pop(0)
+        
+        
 
     def top(self):
-        return self.nodes[-1]
+        """
+        :rtype: int
+        """
+        return self.stack[-1]
 
     def getMin(self):
-        return self.minNodes[-1]
+        """
+        :rtype: int
+        """
+        return self.minStack[-1]
 
 
 # Your MinStack object will be instantiated and called as such:
