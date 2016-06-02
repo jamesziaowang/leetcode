@@ -10,6 +10,6 @@ class Solution(object):
         for i in range(1,len(strs)):
             for j in range(len(strs[i])):
                 if j>len(pre) or pre[j] != strs[j]:
+                    pre = pre.substr(0,j)
                     break;
-            pre = strs.substr(0,j)
         return pre
