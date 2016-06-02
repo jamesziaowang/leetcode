@@ -9,8 +9,9 @@ class Solution(object):
         pre = strs[0]
         for i in range(1,len(strs)):
             j=0
-            while j<len(pre) && j<len(strs[i]):
+            while j<len(pre) and j<len(strs[i]):
                 if pre[j] != strs[i][j]:
                     break;
-                pre = pre[0:j]
+                j+=1
+            pre = pre[0:j] if j>0 else ''
         return pre
