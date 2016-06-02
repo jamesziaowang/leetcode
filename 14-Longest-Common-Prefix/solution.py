@@ -8,8 +8,9 @@ class Solution(object):
             return ""
         pre = strs[0]
         for i in range(1,len(strs)):
-            for j in range(len(strs[i])):
-                if j>len(pre) or pre[j] != strs[i][j]:
-                    pre = pre[0:j]
+            j=0
+            while j<len(pre) && j<len(strs[i]):
+                if pre[j] != strs[i][j]:
                     break;
+                pre = pre[0:j]
         return pre
