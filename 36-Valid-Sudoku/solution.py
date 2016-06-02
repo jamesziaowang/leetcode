@@ -4,7 +4,8 @@ class Solution(object):
         :type board: List[List[str]]
         :rtype: bool
         """
-        strSet = set([])
+        str = board
+        strSet = set()
         for i in range(9):
             for j in range(9):
                 if str[i][j]!='.' and str[i][j] in strSet:
@@ -26,7 +27,7 @@ class Solution(object):
                         return False
                     elif str[i+int(k/3)][j+int(k%3)]!='.':
                         strSet.add(str[i+int(k/3)][j+int(k%3)])
-                    strSet.clear()
+                strSet.clear()
         
         return True
             
