@@ -9,7 +9,7 @@ class Solution(object):
         pre = strs[0]
         for i in range(1,len(strs)):
             for j in range(len(strs[i])):
-                if j>len(pre) or pre[j] != strs[j]:
+                if j>len(pre) or pre[j] != strs[i][j]:
                     pre = pre.substr(0,j)
                     break;
         return pre
