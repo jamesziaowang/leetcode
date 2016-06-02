@@ -4,7 +4,7 @@ class Solution(object):
         :type board: List[List[str]]
         :rtype: bool
         """
-        strSet = set()
+        strSet = set([])
         for i in range(9):
             for j in range(9):
                 if str[i][j]!='.' and str[i][j] in strSet:
