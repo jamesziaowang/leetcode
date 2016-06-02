@@ -12,8 +12,6 @@ class Solution(object):
                 elif str[i][j]!='.':
                     strSet.add(str[i][j])
             strSet.clear()
-    
-        strSet.clear()
         for i in range(9):
             for j in range(9):
                 if str[j][i]!='.' and str[j][i] in strSet:
@@ -21,7 +19,6 @@ class Solution(object):
                 elif str[j][i]!='.':
                     strSet.add(str[j][i])
             strSet.clear()
-    
         for i in range(0,9,3):
             for j in range(0,9,3):
                 for k in range(9):
