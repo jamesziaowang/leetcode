@@ -5,6 +5,6 @@ class Solution(object):
         :rtype: int
         """
         num = 0
-        for i range(len(nums)):
+        for i in range(len(nums)):
             num ^= nums(i)
         return num
