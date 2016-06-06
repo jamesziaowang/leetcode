@@ -17,5 +17,5 @@ class Solution(object):
             else:
                 p1 += 1
                 p2 += 1
-                ret.append(nums[p1])
+                ret.append(nums1[p1])
         return ret
