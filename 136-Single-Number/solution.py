@@ -6,5 +6,5 @@ class Solution(object):
         """
         num = 0
         for i in range(len(nums)):
-            num ^= nums(i)
+            num ^= nums[i]
         return num
