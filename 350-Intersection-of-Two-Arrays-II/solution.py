@@ -15,7 +15,7 @@ class Solution(object):
             elif nums1[p1] < nums2[p2]:
                 p1 += 1
             else:
+                ret.append(nums1[p1])
                 p1 += 1
                 p2 += 1
-                ret.append(nums1[p1])
         return ret
