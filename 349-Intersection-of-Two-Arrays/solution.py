@@ -17,4 +17,4 @@ class Solution(object):
                 ret.add(nums1[p1])
                 p1+=1
                 p2+=1
-        return ret = [i for i in ret]  
+        return [i for i in ret]  
