@@ -5,8 +5,8 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        nums1 = sort(nums1)
-        nums2 = sort(nums2)
+        nums1 = sorted(nums1)
+        nums2 = sorted(nums2)
         p1 = p2 = 0
         ret =[]
         while p1 < len(nums1) and p2< len(nums2):
