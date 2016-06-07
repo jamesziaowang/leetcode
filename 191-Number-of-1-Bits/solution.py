@@ -4,8 +4,8 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        ret = 0
+        ret = 0 
         while n:
-            n &= n-1
-            ret+=1
+            ret += n & 1
+            n >>=1
         return ret
