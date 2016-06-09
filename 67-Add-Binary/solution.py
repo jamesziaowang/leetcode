@@ -14,14 +14,15 @@ class Solution(object):
                 i-=1
             else:
                 c += 0
-                
+    
             if j>=0:
-                c += int(a[j]) 
+                c += int(b[j]) 
                 j-=1
             else:
                 c += 0
-                
             s = str(c % 2) + s
-            c /= 2
+            c = int(c/2)
+        if c ==1:
+            s = str(c) +s
         return s
             
