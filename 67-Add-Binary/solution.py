@@ -6,6 +6,8 @@ class Solution(object):
         :rtype: str
         """
         i,j = len(a)-1,len(b)-1
+        c=0
+        s=""
         while i>=0 or j>=0:
             if i>=0:
                 c += int(a[i]) 
