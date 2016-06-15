@@ -6,5 +6,5 @@ class Solution(object):
         :rtype: int
         """
         if k > len(nums): return 0
-        nums = sorted(nums)
-        return nums[k]
+        nums = sorted(nums, reverse=True)
+        return nums[k-1]
