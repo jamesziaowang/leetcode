@@ -5,6 +5,6 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        if k< len(nums): return 0
+        if k > len(nums): return 0
         nums = sorted(nums)
         return nums[k]
