@@ -1,6 +1,6 @@
 public class Solution {
     public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
-        if(wordList.size <= 0) return 0;
+        if(wordList.size() <= 0) return 0;
         List<Note> queue = new Linkedlist<Node>();
         queue.push(new Node(beginWord,1));
         while(!queue.isEmpty()){
