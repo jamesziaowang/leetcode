@@ -13,7 +13,7 @@ public class Solution {
                     charArray[i] = c;
                     String newWord = new String(charArray);
                     if(wordList.contains(newWord)){
-                        queue.push(new Node(newWord,top.word.len+1));
+                        queue.push(new Node(newWord,top.len+1));
                         newWord.remove(newWord);
                     }
                 }
