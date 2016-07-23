@@ -8,7 +8,7 @@ public class Solution {
             if(top.word.equals(endWord)) return top.len;
             
             for(int i=0; i<top.word.length();i++){
-                Char[] charArray = top.word.toCharArray();
+                char[] charArray = top.word.toCharArray();
                 for(char c ='a'; c<='z';c++){
                     charArray[i] = c;
                     String newWord = new String(charArray);
