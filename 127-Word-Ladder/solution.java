@@ -12,7 +12,7 @@ public class Solution {
                 for(char c ='a'; c<='z';c++){
                     charArray[i] = c;
                     String newWord = new String(charArray);
-                    if(wordList.contaits(newWord)){
+                    if(wordList.contains(newWord)){
                         queue.push(new Node(newWord,top.word.len+1));
                         newWord.remove(newWord);
                     }
