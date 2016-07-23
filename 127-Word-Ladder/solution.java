@@ -22,7 +22,7 @@ public class Solution {
         return 0;
     }
     
-    private class Node{
+    class Node{
         String word;
         int len;
         Node(String t_word, int t_len){
