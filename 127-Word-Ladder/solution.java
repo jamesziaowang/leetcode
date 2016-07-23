@@ -25,7 +25,7 @@ public class Solution {
     static class Node{
         String word;
         int len;
-        Node(String t_word, int t_len){
+        public Node(String t_word, int t_len){
             word = t_word;
             len = t_len;
         }
