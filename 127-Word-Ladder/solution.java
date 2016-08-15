@@ -1,33 +1,37 @@
 public class Solution {
-    public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
-        if(wordList.size() <= 0) return 0;
-        LinkedList<Node> queue = new LinkedList<Node>();
-        queue.push(new Node(beginWord,1));
+    public static int ladderLength(String beginWord, String endWord, Set<String> wordList) {
+        Queue<String> queue = new LinkedList<String>();
+        queue.add(beginWord);
+        wordList.remove(beginWord);
+        int length = 1;
         while(!queue.isEmpty()){
-            Node top = queue.pop();
-            if(top.word.equals(endWord)) return top.len;
-            
-            for(int i=0; i<top.word.length();i++){
-                char[] charArray = top.word.toCharArray();
-                for(char c ='a'; c<='z';c++){
-                    charArray[i] = c;
-                    String newWord = new String(charArray);
-                    if(wordList.contains(newWord)){
-                        queue.push(new Node(newWord,top.len+1));
-                        newWord.remove(newWord);
+            int count = queue.size();
+            for(int k=0;i<count;k++){
+                String word = queue.poll();
+                if(word.equals(endWord)) return length;
+                char[] chars = word.toCharArray();
+                for(int i=0;i<chars.length;i++){
+                    for(char j='a';j<='z';j++){
+                        if(chars[i]==j) continue;
+                        chars[i]=j;
+                        String newWord = new String(chars);
+                        if(wordList.contains(newWord)){
+                            queue.add(newWord);
+                            wordList.remove(newWord);
+                        }
                     }
                 }
             }
+            length++;
         }
         return 0;
     }
-    
-    static class Node{
-        String word;
-        int len;
-        public Node(String t_word, int t_len){
-            word = t_word;
-            len = t_len;
-        }
+    public static void main(String[] args){
+        Set<String> wordList = new HashSet<String>();
+        wordList.add("a");
+        wordList.add("b");
+        wordList.add("c");
+        int ret = ladderLength("a","c",wordList);
+        System.out.println(ret);
     }
 }
