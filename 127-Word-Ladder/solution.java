@@ -6,14 +6,14 @@ public class Solution {
         int length = 1;
         while(!queue.isEmpty()){
             int count = queue.size();
-            for(int k=0;i<count;k++){
+            for(int k=0;k<count;k++){
                 String word = queue.poll();
                 if(word.equals(endWord)) return length;
-                char[] chars = word.toCharArray();
-                for(int i=0;i<chars.length;i++){
-                    for(char j='a';j<='z';j++){
-                        if(chars[i]==j) continue;
-                        chars[i]=j;
+                for(int i=0;i<word.length();i++){
+                    for(char c='a';c<='z';c++){
+                        char[] chars = word.toCharArray();
+                        if(chars[i]==c) continue;
+                        chars[i]=c;
                         String newWord = new String(chars);
                         if(wordList.contains(newWord)){
                             queue.add(newWord);
@@ -25,13 +25,5 @@ public class Solution {
             length++;
         }
         return 0;
-    }
-    public static void main(String[] args){
-        Set<String> wordList = new HashSet<String>();
-        wordList.add("a");
-        wordList.add("b");
-        wordList.add("c");
-        int ret = ladderLength("a","c",wordList);
-        System.out.println(ret);
     }
 }
