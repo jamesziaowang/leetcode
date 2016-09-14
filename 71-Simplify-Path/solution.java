@@ -7,7 +7,7 @@ public class Solution {
             if(str.equals("..")){
                 if(!s.isEmpty()) s.pop(); 
             }else{
-                str.push(str);
+                s.push(str);
             }
         }
         String ret = s.isEmpty()?"/":"";
