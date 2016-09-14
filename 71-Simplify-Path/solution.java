@@ -3,7 +3,7 @@ public class Solution {
         Stack<String> s = new Stack<String>();
         String[] words = path.split("/");
         for(String str : words){
-            if(str.length==0 ||str.equals(".")) continue;
+            if(str.length()==0 ||str.equals(".")) continue;
             if(str.equals("..")){
                 if(!s.isEmpty()) s.pop(); 
             }else{
