@@ -1,7 +1,7 @@
 public class Solution {
     public static List<List<Integer>> combine(int n, int k) {
-        ArrayList<ArrayList<Integer>> rst = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Integer> solution = new ArrayList<Integer>();
+        List<ArrayList<Integer>> rst = new ArrayList<ArrayList<Integer>>();
+        List<Integer> solution = new ArrayList<Integer>();
         
         helper(rst, solution, n, k, 1);
         return rst;
