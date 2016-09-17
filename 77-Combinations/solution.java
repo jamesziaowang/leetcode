@@ -1,5 +1,5 @@
 public class Solution {
-    public ArrayList<ArrayList<Integer>> combine(int n, int k) {
+    public static List<List<Integer>> combine(int n, int k) {
         ArrayList<ArrayList<Integer>> rst = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> solution = new ArrayList<Integer>();
         
